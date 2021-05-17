@@ -11,7 +11,7 @@ function Projects() {
         className="card"
         style={{ overflowX: "hidden" }}
       >
-        <img src={Issue} alt="card 1" />
+        <img src={Issue} alt="card 1" style={{maxWidth: 500, maxHeight: 300, marginTop: 25}}/>
         <div>
           <h3>MusicXML Convertor</h3>
           <ul>
@@ -39,7 +39,7 @@ function Projects() {
         </div>
       </section>
       <section className="card" data-aos="fade-left">
-        <img src={Book} alt="card 1" />
+        <img src={Book} alt="card 1" style={{width: 500, height: 300, marginTop: 25}} />
         <div>
           <h3>Mom & Pop Book Store</h3>
           <ul>
@@ -76,7 +76,7 @@ function Projects() {
       </section>
 
       <section className="card" data-aos="fade-right">
-        <img src={Think} alt="card 1" />
+        <img src={Think} alt="card 1" style={{width: '80%', height: 300, marginTop: 25}} />
         <div>
           <h3>E-Commerce Web App</h3>
           <ul>
