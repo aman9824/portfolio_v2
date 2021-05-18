@@ -76,7 +76,7 @@ function Projects() {
       </section>
 
       <section className="card" data-aos="fade-right">
-        <img src={Think} alt="card 1" style={{width: '80%', height: 300, marginTop: 25}} />
+        <img src={Think} alt="card 1" style={{width: 500, height: 300, marginTop: 25}} />
         <div>
           <h3>E-Commerce Web App</h3>
           <ul>
