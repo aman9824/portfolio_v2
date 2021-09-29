@@ -11,7 +11,7 @@ function Main() {
         </span>
       </h2>
       <h1 className="title">
-        Junior Automation Engineer At Equifax.
+        I am Junior Automation Engineer At Equifax.
       </h1>
       <h5 style={{ marginTop: "20px", textAlign: "center" }}>
         Actively Looking for a full-time oppurtunities
