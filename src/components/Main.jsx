@@ -11,7 +11,7 @@ function Main() {
         </span>
       </h2>
       <h1 className="title">
-        I am a Final Year Computer Science Student graduating in May 2021.
+        Junior Automation Engineer At Equifax.
       </h1>
       <h5 style={{ marginTop: "20px", textAlign: "center" }}>
         Actively Looking for a full-time oppurtunities
