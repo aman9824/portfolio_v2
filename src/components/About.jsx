@@ -10,11 +10,9 @@ import {
   SiMongodb,
   SiPostgresql,
   SiRedux,
-   SiJest,
+  SiJest,
   SiGit,
-  SiAngular,
-  SiFlask,
-  SiCsharp
+  SiFlask
 } from "react-icons/si";
 
 function About() {
@@ -28,17 +26,17 @@ function About() {
         <div className="text">
           <p>
             🎓 New Grad with a Bachelor's Of Science in Computer Science
-            (May 2021).
+            (June 2021).
           </p>
           <p>
             I am originally from India 🇮🇳 and have moved to Canada 🇨🇦 in 2018.
           </p>
           <p>
-            👨‍💻 Software Developer at The Graduate Network. Building backend API using Python, Flask, Selenium and MongoDB.
+            👨‍💻 Automation Engineer at Equifax.
           </p>
           <p>
-            As for my future, I am seeking to work as a Full Stack Developer /
-            Backend Developer / Software Developer / Frontend Developer with a diverse team.
+            As for my future, I am seeking to work as a Full Stack Developer |
+            Backend Developer | Software Developer with a diverse team.
           </p>
         </div>
       </div>
@@ -135,24 +133,6 @@ function About() {
                 <SiPython />
               </span>
               Selenium
-            </p>
-            <p className="skill">
-              <span>
-                <SiCsharp />
-              </span>
-              C#
-            </p>
-            <p className="skill">
-              <span>
-                <SiCsharp />
-              </span>
-              ASP.NET
-            </p>
-            <p className="skill">
-              <span>
-                <SiAngular />
-              </span>
-              Angular
             </p>
           </div>
         </div>
