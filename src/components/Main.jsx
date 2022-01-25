@@ -11,10 +11,10 @@ function Main() {
         </span>
       </h2>
       <h1 className="title">
-        I am Junior Automation Engineer At Equifax.
+        I am Software Developer at Amdocs.
       </h1>
       <h5 style={{ marginTop: "20px", textAlign: "center" }}>
-        Actively Looking for a full-time oppurtunities
+        Thanks for visiting my Portfolio
       </h5>
       <div className="more">
         <p>

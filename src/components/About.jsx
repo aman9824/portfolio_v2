@@ -32,11 +32,10 @@ function About() {
             I am originally from India 🇮🇳 and have moved to Canada 🇨🇦 in 2018.
           </p>
           <p>
-            👨‍💻 Automation Engineer at Equifax.
+            👨‍💻 Software Developer at Amdocs.
           </p>
           <p>
-            As for my future, I am seeking to work as a Full Stack Developer |
-            Backend Developer | Software Developer with a diverse team.
+            As for my future, I am seeking to work as a Backend Developer | Software Developer with a diverse team.
           </p>
         </div>
       </div>
