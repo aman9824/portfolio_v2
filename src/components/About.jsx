@@ -1,9 +1,9 @@
 import React from "react";
 import Logo from "../assets/logo.jpg";
+import {FaJava} from "react-icons/fa";
 import {
   SiTypescript,
   SiJavascript,
-  SiJava,
   SiPython,
   SiPostgresql,
   SiGit,
@@ -48,7 +48,7 @@ function About() {
           <div className="skills-grid">
             <p className="skill">
               <span>
-                <SiJava />
+                <FaJava />
               </span>
               Java
             </p>
