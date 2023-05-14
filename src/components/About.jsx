@@ -1,18 +1,21 @@
 import React from "react";
 import Logo from "../assets/logo.jpg";
-import { FaReact, FaNodeJs, FaSass } from "react-icons/fa";
 import {
-  SiNextDotJs,
   SiTypescript,
   SiJavascript,
   SiJava,
   SiPython,
-  SiMongodb,
   SiPostgresql,
-  SiRedux,
-  SiJest,
   SiGit,
-  SiFlask
+  SiFlask,
+  SiSpring,
+  SiSpringsecurity,
+  SiApachemaven,
+  SiApachekafka,
+  SiCss3,
+  SiAmazonec2,
+  SiHtml5,
+  SiAmazonaws
 } from "react-icons/si";
 
 function About() {
@@ -45,15 +48,39 @@ function About() {
           <div className="skills-grid">
             <p className="skill">
               <span>
-                <FaReact />
+                <SiJava />
               </span>
-              ReactJs
+              Java
             </p>
             <p className="skill">
               <span>
-                <FaNodeJs />
+                <SiGit />
               </span>
-              NodeJs
+              Version Control
+            </p>
+            <p className="skill">
+              <span>
+                <SiPostgresql />
+              </span>
+              Postgres
+            </p>
+            <p className="skill">
+              <span>
+                <SiPython />
+              </span>
+              Python
+            </p>
+            <p className="skill">
+              <span>
+                <SiSpring />
+              </span>
+              Spring
+            </p>
+            <p className="skill">
+              <span>
+                <SiSpringsecurity />
+              </span>
+              Spring Security
             </p>
             <p className="skill">
               <span>
@@ -69,69 +96,45 @@ function About() {
             </p>
             <p className="skill">
               <span>
-                <SiRedux />
+                <SiAmazonaws />
               </span>
-              Redux
+              AWS
             </p>
             <p className="skill">
               <span>
-                <SiNextDotJs />
+                <SiApachemaven />
               </span>
-              NextJs
+              Maven
             </p>
             <p className="skill">
               <span>
-                <SiJest />
+                <SiApachekafka />
               </span>
-              Jest
+              Apache Kafka
             </p>
             <p className="skill">
               <span>
-                <FaSass />
+                <SiCss3 />
               </span>
-              Sass/SCSS
+              CSS
             </p>
             <p className="skill">
               <span>
-                <SiGit />
+                <SiAmazonec2 />
               </span>
-              Version Control
+              AWS EC2
             </p>
             <p className="skill">
               <span>
-                <SiMongodb />
+                <SiHtml5 />
               </span>
-              MongoDB
-            </p>
-            <p className="skill">
-              <span>
-                <SiPostgresql />
-              </span>
-              Postgres
-            </p>
-            <p className="skill">
-              <span>
-                <SiJava />
-              </span>
-              Java
-            </p>
-            <p className="skill">
-              <span>
-                <SiPython />
-              </span>
-              Python
+              HTML5
             </p>
             <p className="skill">
               <span>
                 <SiFlask />
               </span>
               Flask
-            </p>
-            <p className="skill">
-              <span>
-                <SiPython />
-              </span>
-              Selenium
             </p>
           </div>
         </div>
