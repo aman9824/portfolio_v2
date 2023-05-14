@@ -9,11 +9,11 @@ import {
   SiGit,
   SiFlask,
   SiSpring,
-  SiSpringsecurity,
+  SiHelm,
   SiApachemaven,
   SiApachekafka,
   SiCss3,
-  SiAmazonec2,
+  SiJenkins,
   SiHtml5,
   SiAmazonaws
 } from "react-icons/si";
@@ -78,9 +78,9 @@ function About() {
             </p>
             <p className="skill">
               <span>
-                <SiSpringsecurity />
+                <SiHelm />
               </span>
-              Spring Security
+              Helm
             </p>
             <p className="skill">
               <span>
@@ -120,9 +120,9 @@ function About() {
             </p>
             <p className="skill">
               <span>
-                <SiAmazonec2 />
+                <SiJenkins />
               </span>
-              AWS EC2
+              Jenkins
             </p>
             <p className="skill">
               <span>
