@@ -13,7 +13,7 @@ function Header() {
         <p>amanpatel9824@gmail.com</p>
       </div>
       <div className="header__right">
-        <span className="linkedin">
+        <span className="resume">
           <a
             href={Resume}
             target="_blank"
