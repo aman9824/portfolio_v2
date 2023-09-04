@@ -2,9 +2,8 @@ import React from "react";
 import Resume from "../assets/Resume.pdf";
 import DarkMode from "./darkmode";
 import { AiFillLinkedin } from "react-icons/ai";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaFilePdf } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import {GrDocumentPdf} from "react-icons/gr";
 
 function Header() {
   return (
@@ -20,7 +19,7 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GrDocumentPdf />
+            <FaFilePdf />
           </a>
         </span>
         <span className="linkedin">
