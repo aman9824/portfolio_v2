@@ -10,6 +10,7 @@ function Work() {
         <p className="job__title">Software Developer</p>
         <p className="company__name">Amdocs | Jan 2022 - Present</p>
         <ul className="job__points">
+          <li> Part of the Development and delivery Unit responsible for the CRM application for the telecom base customers. Involving E2E implementation activity starting from development to delivery. Maintained clean code practice and with 100% aim on automated test coverage. </li>
           <li> Design, develop, modify, debug and/or maintain software code according to functional, non-functional and technical design specifications. </li>
           <li> Investigate issues by reviewing/debugging code, provides fixes and workarounds, and reviews changes for operability to maintain existing software solutions. </li>
           <li> Work within a team, collaborate and add value through participation in peer code reviews, provide comments and suggestions, work with cross-functional teams to achieve goals. </li>
