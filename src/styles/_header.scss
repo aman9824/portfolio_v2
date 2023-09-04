@@ -25,6 +25,10 @@
       color: var(--text-color);
       text-decoration: none;
     }
+    .resume {
+      margin-right: 30px;
+      font-size: 23px;
+    }
     .linkedin {
       margin-right: 30px;
       font-size: 25px;
@@ -55,6 +59,10 @@
       }
     }
     .header__right {
+      .resume {
+        cursor: pointer;
+        font-size: 25px;
+      }
       .linkedin {
         cursor: pointer;
         font-size: 25px;
