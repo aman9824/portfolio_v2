@@ -10,7 +10,7 @@ function Work() {
         <p className="job__title">Software Developer</p>
         <p className="company__name">Amdocs | Jan 2022 - Present</p>
         <ul className="job__points">
-          <li> Developed and maintained software code with Java and Spring Boot according to functional, non-functional, and technical design specification. </li>
+          <li> Developed and maintained software code with Java, Spring Boot, JavaScript and ReactJS according to functional, non-functional, and technical design specification. </li>
           <li> Writing clean, maintainable, and testable code with clean code practices with 100% aim on automated test coverages using Mockito and TestNG. </li>
           <li> Collaborated with cross-function teams to design, develop and implement scalable solutions. </li>
           <li> Troubleshooted and resolved production and non-production issues by reviewing/debugging code using IntelliJ and Kibana and provided fixes and workarounds in timely manner to ensure deadlines were met. </li>
