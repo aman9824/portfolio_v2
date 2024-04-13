@@ -28,17 +28,16 @@ function About() {
         </div>
         <div className="text">
           <p>
-            🎓 New Grad with a Bachelor's Of Science in Computer Science
-            (June 2021).
+            With around 3 years of experience, I have a strong background in B/E development.
           </p>
           <p>
-            I am originally from India 🇮🇳 and have moved to Canada 🇨🇦 in 2018.
+            Specializing in RESTful APIs and event-driven systems. Skilled in Java, Spring Boot, JavaScript, microservices and Kafka with proficiency in backend-driven UI development with Camunda for BPMN-based processes.
           </p>
           <p>
-            👨‍💻 Software Developer at Amdocs.
+            👨‍💻 Software Developer @ Amdocs | AWS CCP Certified
           </p>
           <p>
-            As for my future, I am seeking to work as a Backend Developer | Software Developer with a diverse team.
+            Adept problem-solver with analytical thinking, dedicated to agile practices. Passionate about learning and staying updated on emerging technologies.
           </p>
         </div>
       </div>
