@@ -10,7 +10,7 @@ function Header() {
     <div className="header">
       <div className="header__left">
         <h3 className="logo">Aman Patel</h3>
-        <p>amanpatel9824@gmail.com</p>
+        <p>pateljaman@outlook.com</p>
       </div>
       <div className="header__right">
         <span className="resume">
@@ -24,7 +24,7 @@ function Header() {
         </span>
         <span className="linkedin">
           <a
-            href="https://www.linkedin.com/in/aman-patel-a0109719a/"
+            href="https://www.linkedin.com/in/amanjpatel/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -42,7 +42,7 @@ function Header() {
         </span>
         <span className="gmail">
           <a
-            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=amanpatel9824@gmail.com&tf=1"
+            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=pateljaman@outlook.com&tf=1"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -22,7 +22,7 @@ function Work() {
       </div>
 
       <div className="job">
-        <p className="job__title">Junior Quality Automation Engineer</p>
+        <p className="job__title">Quality Automation Engineer</p>
         <p className="company__name">Equifax | July 2021 - January 2022</p>
         <ul className="job__points">
           <li> Contributed to test planning and hands-on test design, development, and maintenance using test automation frameworks and tools like Selenium and JUnit, leading to a 20% reduction in test cycle time and a 15% increase in defect detection rate. </li>
