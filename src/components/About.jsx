@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/logo.jpg";
-import {FaJava} from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
 import {
   SiTypescript,
   SiJavascript,
@@ -15,7 +15,7 @@ import {
   SiCss3,
   SiJenkins,
   SiHtml5,
-  SiAmazonaws
+  SiAmazonaws,
 } from "react-icons/si";
 
 function About() {
@@ -28,16 +28,23 @@ function About() {
         </div>
         <div className="text">
           <p>
-            With around 3 years of experience, I have a strong background in B/E development.
+            Software Developer / Fullstack Engineer with 3 years of experience
+            in supporting complex, large-scale enterprise-grade platforms.
           </p>
           <p>
-            Specializing in RESTful APIs and event-driven systems. Skilled in Java, Spring Boot, JavaScript, microservices and Kafka with proficiency in backend-driven UI development with Camunda for BPMN-based processes.
+            Good functional and business knowledge in telecommunications and
+            Fintech domain.
           </p>
           <p>
-            👨‍💻 Software Developer @ Amdocs | AWS CCP Certified
+            Proﬁcient in RESTful APIs and event driven Micro Front-end /
+            Microservice architecture. • Experienced in building and maintaining
+            enterprise applications, and scalable containerized systems in
+            public cloud environments like AWS and OpenShift.{" "}
           </p>
           <p>
-            Adept problem-solver with analytical thinking, dedicated to agile practices. Passionate about learning and staying updated on emerging technologies.
+            Adept problem-solver with analytical thinking, dedicated to agile
+            practices. Passionate about learning and staying updated on emerging
+            technologies.
           </p>
         </div>
       </div>

@@ -11,7 +11,8 @@ function Main() {
         </span>
       </h2>
       <h1 className="title">
-        I am Software Developer @ Amdocs | AWS Certified Cloud Practitioner | Java | Spring Boot | JavaScript | React
+        I am Software / Full stack Developer | AWS Certified Cloud Practitioner
+        | Java | Spring Boot | Kotlin | JavaScript | React
       </h1>
       <h5 style={{ marginTop: "20px", textAlign: "center" }}>
         Thanks for visiting my Portfolio
