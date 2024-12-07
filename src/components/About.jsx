@@ -37,7 +37,7 @@ function About() {
           </p>
           <p>
             Proﬁcient in RESTful APIs and event driven Micro Front-end /
-            Microservice architecture. • Experienced in building and maintaining
+            Microservice architecture. Experienced in building and maintaining
             enterprise applications, and scalable containerized systems in
             public cloud environments like AWS and OpenShift.{" "}
           </p>
