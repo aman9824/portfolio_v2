@@ -43,7 +43,7 @@ export const stats: { value: string; label: string }[] = [
   { value: "4+ yrs", label: "Shipping production software" },
   { value: "2", label: "Fortune-50 enterprises embedded with" },
   { value: "~40%", label: "Manual effort cut with multi-agent GenAI" },
-  { value: "3", label: "Open-source AI projects shipping" },
+  { value: "3", label: "Open-source AI projects live" },
 ];
 
 export const marquee: string[] = [
@@ -88,24 +88,27 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Finance — AI Filings Analyst",
-    status: "Shipping soon",
+    status: "Live",
     blurb:
       "A multi-agent Claude system that ingests 10-K / 10-Q and earnings reports and extracts KPIs and risk signals with span-level citations — RAG-grounded and eval-gated for accuracy. Built for the financial-services vertical.",
     tags: ["Claude Agent SDK", "RAG", "Citations", "Evals", "Python"],
+    repo: "https://github.com/aman9824/finance-filings-analyst",
   },
   {
     title: "Real Estate — Investment Analyzer",
-    status: "Shipping soon",
+    status: "Live",
     blurb:
       "Turns property listings and comparables into investment memos — cap rate, cash-on-cash, IRR — with agent reasoning and cited assumptions. The same Claude stack, applied to a second vertical.",
     tags: ["Claude Agent SDK", "Multi-agent", "RAG", "Financial modeling"],
+    repo: "https://github.com/aman9824/real-estate-analyzer",
   },
   {
     title: "FactorForge — Auditable Quant-Research Engine",
-    status: "Shipping soon",
+    status: "Live",
     blurb:
       "Capstone: turns quant-finance research (papers, filings, news) into an evidence-linked knowledge graph using vectorless retrieval — no embeddings; the model navigates document structure + graph traversal, and every fact is cited. A Claude multi-agent pipeline then researches, hypothesizes, and backtests factor strategies with a built-in overfitting critic. MCP-served, eval-gated. Research/educational — not financial advice.",
     tags: ["Claude Agent SDK", "Vectorless RAG", "Knowledge graph", "MCP", "Backtesting", "Evals"],
+    repo: "https://github.com/aman9824/factorforge",
   },
   {
     title: "This Portfolio",
