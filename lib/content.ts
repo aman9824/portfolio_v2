@@ -43,7 +43,7 @@ export const stats: { value: string; label: string }[] = [
   { value: "4+ yrs", label: "Shipping production software" },
   { value: "2", label: "Fortune-50 enterprises embedded with" },
   { value: "~40%", label: "Manual effort cut with multi-agent GenAI" },
-  { value: "3", label: "Open-source AI projects live" },
+  { value: "4", label: "Open-source AI projects live" },
 ];
 
 export const marquee: string[] = [
@@ -109,6 +109,14 @@ export const projects: Project[] = [
       "Capstone: turns quant-finance research (papers, filings, news) into an evidence-linked knowledge graph using vectorless retrieval — no embeddings; the model navigates document structure + graph traversal, and every fact is cited. A Claude multi-agent pipeline then researches, hypothesizes, and backtests factor strategies with a built-in overfitting critic. MCP-served, eval-gated. Research/educational — not financial advice.",
     tags: ["Claude Agent SDK", "Vectorless RAG", "Knowledge graph", "MCP", "Backtesting", "Evals"],
     repo: "https://github.com/aman9824/factorforge",
+  },
+  {
+    title: "YTC — Dual-Engine Quant Research Platform",
+    status: "Live",
+    blurb:
+      "A paper-trading research platform that decouples slow, Claude-driven market-narrative analysis (evidence-cited signals, verified against source) from a fast, deterministic execution engine with an arithmetic risk gate — no model in the hot path. Includes a fully-built C++ risk gate (pybind11, parity-tested), a backtester that runs the exact same decision path as live, an eval gate on signal quality, and a live FastAPI command-center dashboard. Sandbox only — not financial advice.",
+    tags: ["Claude on Vertex", "C++ / pybind11", "asyncio", "FastAPI", "Backtesting", "Evals"],
+    repo: "https://github.com/aman9824/ytc",
   },
   {
     title: "This Portfolio",
