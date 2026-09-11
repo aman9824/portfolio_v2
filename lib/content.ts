@@ -4,13 +4,17 @@
 // This is a PUBLIC site: client work is described generically (no client names,
 // no confidential project specifics). Customers are referred to by industry +
 // scale only ("Fortune-50 automotive / telecom").
+//
+// Integrity rule: no metric appears here unless it was actually measured.
+// Where a number is n=1 or scoped, that scope is stated inline.
 // =============================================================================
 
 export const profile = {
   name: "Aman Patel",
-  role: "Forward-Deployed AI Engineer",
+  role: "Forward-Deployed AI Engineer · Backend & Distributed Systems",
   location: "Toronto, Canada",
-  availability: "TN-visa eligible · Open to US relocation",
+  availability:
+    "Canadian citizen · TN-eligible for US roles · Open to relocation",
   email: "pateljaman@outlook.com",
   github: "https://github.com/aman9824",
   linkedin: "https://www.linkedin.com/in/amanjpatel",
@@ -30,19 +34,19 @@ export const hero = {
   eyebrow: "Forward-Deployed AI Engineer · Applied AI",
   // words wrapped in *asterisks* render as gradient highlights
   headline: "I ship *production GenAI* where the customer lives.",
-  sub: "Customer-embedded software engineer with 4 years building for Fortune-50 enterprises. I build production multi-agent systems on Claude — discovery to deployment — that modernize legacy systems and cut real cost.",
+  sub: "Customer-embedded software engineer, five years building for Fortune-50 enterprises. I build production multi-agent systems on Claude — discovery to deployment — on a foundation of Java/Spring Boot microservices and distributed-systems production ownership. The second half is what makes the first half reliable.",
   highlights: [
     "Multi-agent GenAI on Claude (Claude Agent SDK, LangGraph)",
-    "MCP servers · sub-agents · agent skills",
-    "Evaluation frameworks + prompt-cache cost telemetry",
-    "Python · Java/Spring Boot · TypeScript · AWS · GCP · OpenShift",
+    "MCP servers · retrieval grounding · test-case-driven evals",
+    "Java 17 · Spring Boot · Kafka · Kubernetes · OpenShift",
+    "2+ years production on-call: concurrency, locking, index performance",
   ],
 };
 
 export const stats: { value: string; label: string }[] = [
-  { value: "4+ yrs", label: "Shipping production software" },
+  { value: "5+ yrs", label: "Shipping production software" },
   { value: "2", label: "Fortune-50 enterprises embedded with" },
-  { value: "~40%", label: "Manual effort cut with multi-agent GenAI" },
+  { value: "6mo → 6wk", label: "Pilot app: manual baseline vs GenAI-assisted" },
   { value: "4", label: "Open-source AI projects live" },
 ];
 
@@ -51,28 +55,29 @@ export const marquee: string[] = [
   "Claude Agent SDK",
   "MCP",
   "LangGraph",
-  "CrewAI",
   "RAG",
   "Evals",
   "Python",
   "TypeScript",
-  "Java",
+  "Java 17",
   "Spring Boot",
+  "Concurrency",
   "AWS",
   "GCP",
   "Vertex AI",
   "OpenShift",
   "Kubernetes",
   "Kafka",
+  "Elasticsearch",
   "PostgreSQL",
 ];
 
 export const about = {
   heading: "The Forward-Deployed pattern, by default",
   paragraphs: [
-    "I'm a customer-embedded software engineer who specializes in deploying generative AI inside large enterprises. For the past year and a half I've built production multi-agent GenAI for a Fortune-50 automotive customer's legacy-modernization program — running on Claude (Claude Agent SDK, Claude Code, and Claude models via Vertex AI), with structured retrieval, evaluation-driven iteration, and production observability on OpenShift + GCP. We've cut targeted manual effort by ~40%.",
-    "Before that I spent 27 months at Amdocs as a customer-embedded full-stack engineer on a Fortune-50 US telecom account — running discovery directly with the carrier's teams and shipping React + Spring Boot services on AWS + OpenShift, cutting downtime ~30% and incident-resolution time ~20%.",
-    "What I bring isn't just “I know Claude.” It's the full loop — own the customer relationship, the architecture, and the production deployment end-to-end, then codify what's repeatable. I've worked this way for four years.",
+    "I'm a customer-embedded software engineer who specializes in deploying generative AI inside large enterprises. Since January 2025 I've built production multi-agent GenAI for a Fortune-50 automotive customer's legacy-modernization program — running on Claude (Claude Agent SDK, Claude Code, and Claude models via Vertex AI), converting legacy mainframe COBOL/JCL into Java 17 Spring Boot services. Hybrid lexical + dense retrieval over Elasticsearch keeps generated code grounded in the customer's own source rather than model priors, and test-case-driven evaluation gates what ships. On the pilot application, delivery fell from roughly six months on the prior all-manual baseline to roughly six weeks.",
+    "Before that I spent 27 months at Amdocs as a customer-embedded full-stack engineer on a Fortune-50 US telecom account — running discovery directly with the carrier's teams and shipping React + Spring Boot services on AWS + OpenShift. Just over two of those years were on a 24/7 on-call rotation, owning production incident triage: concurrency and race conditions, lock contention, and database index performance, diagnosed live under load with incomplete information.",
+    "What I bring isn't just “I know Claude.” It's the full loop — own the customer relationship, the architecture, and the production deployment end-to-end, then codify what's repeatable. Plenty of people can call an LLM API; far fewer can reason about why a distributed system fails at 3am, and that turns out to be exactly the skill production GenAI needs. I've worked this way for five years.",
   ],
 };
 
@@ -90,33 +95,39 @@ export const projects: Project[] = [
     title: "Finance — AI Filings Analyst",
     status: "Live",
     blurb:
-      "A multi-agent Claude system that ingests 10-K / 10-Q and earnings reports and extracts KPIs and risk signals with span-level citations — RAG-grounded and eval-gated for accuracy. Built for the financial-services vertical.",
-    tags: ["Claude Agent SDK", "RAG", "Citations", "Evals", "Python"],
+      "A multi-agent Claude system that extracts KPIs and risk signals from 10-K / 10-Q filings with span-level citations. The design problem: an LLM asked to read a filing will produce confident numbers that aren't in the document — so a separate citation verifier re-reads the cited span and rejects any claim it doesn't support. Hybrid BM25 + dense retrieval, because filings are full of exact terms embeddings miss. Eval thresholds enforced in CI. Personal engineering exercise; not financial advice.",
+    tags: ["Claude", "RAG", "Citations", "Evals", "Python"],
     repo: "https://github.com/aman9824/finance-filings-analyst",
+  },
+  {
+    title: "YTC — Dual-Engine Research Platform",
+    status: "Live",
+    blurb:
+      "A paper-trading research platform built around one architectural rule: no model in the hot path. Slow, Claude-driven narrative analysis runs on one path; a completely separate deterministic execution engine makes the decisions, gated by arithmetic risk checks. The C++ risk gate is exposed through pybind11 and parity-tested against the Python reference, so the fast path is provably equivalent to the readable one. The backtester replays the exact live decision path rather than a reimplementation of it. Sandbox only — not financial advice.",
+    tags: ["C++ / pybind11", "asyncio", "FastAPI", "Backtesting", "Evals"],
+    repo: "https://github.com/aman9824/ytc",
+  },
+  {
+    title: "FactorForge — Auditable Research Engine",
+    status: "Live",
+    blurb:
+      "Answers questions over a document corpus without using embeddings at all. Instead of vector similarity it navigates documents directly with an LLM and traverses a knowledge graph built from what it finds, so every fact carries a span-level citation and the retrieval path is auditable end-to-end. The trade-off is deliberate: slower per query than a vector store, but you can show exactly why a fact was retrieved — which is what an audit trail actually requires. Served as a standalone MCP server. Research/educational — not financial advice.",
+    tags: [
+      "MCP",
+      "Vectorless retrieval",
+      "Knowledge graph",
+      "Multi-agent",
+      "Evals",
+    ],
+    repo: "https://github.com/aman9824/factorforge",
   },
   {
     title: "Real Estate — Investment Analyzer",
     status: "Live",
     blurb:
-      "Turns property listings and comparables into investment memos — cap rate, cash-on-cash, IRR — with agent reasoning and cited assumptions. The same Claude stack, applied to a second vertical.",
-    tags: ["Claude Agent SDK", "Multi-agent", "RAG", "Financial modeling"],
+      "Generates investment memos — cap rate, cash-on-cash, IRR — through a staged pipeline: Researcher, then Underwriter, then Reviewer. The rule the whole design enforces is that the language models never perform arithmetic. Every number originates from a deterministic, unit-tested finance core exposed to the agents as a tool, and the orchestrator independently re-verifies each figure against that core. Agents decide what to compute; they never compute it. Not financial advice.",
+    tags: ["Claude", "Multi-agent", "Tool use", "Deterministic core", "Python"],
     repo: "https://github.com/aman9824/real-estate-analyzer",
-  },
-  {
-    title: "FactorForge — Auditable Quant-Research Engine",
-    status: "Live",
-    blurb:
-      "Capstone: turns quant-finance research (papers, filings, news) into an evidence-linked knowledge graph using vectorless retrieval — no embeddings; the model navigates document structure + graph traversal, and every fact is cited. A Claude multi-agent pipeline then researches, hypothesizes, and backtests factor strategies with a built-in overfitting critic. MCP-served, eval-gated. Research/educational — not financial advice.",
-    tags: ["Claude Agent SDK", "Vectorless RAG", "Knowledge graph", "MCP", "Backtesting", "Evals"],
-    repo: "https://github.com/aman9824/factorforge",
-  },
-  {
-    title: "YTC — Dual-Engine Quant Research Platform",
-    status: "Live",
-    blurb:
-      "A paper-trading research platform that decouples slow, Claude-driven market-narrative analysis (evidence-cited signals, verified against source) from a fast, deterministic execution engine with an arithmetic risk gate — no model in the hot path. Includes a fully-built C++ risk gate (pybind11, parity-tested), a backtester that runs the exact same decision path as live, an eval gate on signal quality, and a live FastAPI command-center dashboard. Sandbox only — not financial advice.",
-    tags: ["Claude on Vertex", "C++ / pybind11", "asyncio", "FastAPI", "Backtesting", "Evals"],
-    repo: "https://github.com/aman9824/ytc",
   },
   {
     title: "This Portfolio",
@@ -124,7 +135,7 @@ export const projects: Project[] = [
     blurb:
       "Designed and built from scratch in Next.js — animated, fast, and fully responsive. The site you're reading is itself the project.",
     tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    repo: "https://github.com/aman9824",
+    repo: "https://github.com/aman9824/portfolio_v2",
     demo: "https://amanpatel.vercel.app",
   },
 ];
@@ -146,9 +157,11 @@ export const experience: Experience[] = [
     location: "Toronto, ON (Remote)",
     customer: "Fortune-50 automotive customer",
     bullets: [
-      "Architected a multi-agent system on Claude (Claude Agent SDK, LangGraph, with Google ADK) plus structured retrieval (RAG) that automates large-scale legacy system modernization — cutting targeted manual effort ~40%.",
-      "Ran discovery directly with the customer's engineering teams; translated business and system requirements into shippable architecture.",
-      "Built and operate the production deployment on Vertex AI + OpenShift across Claude and Gemini models — invocation, retrieval, observability, and cost telemetry.",
+      "Designed and built a production multi-agent system (Python, Claude Agent SDK, LangGraph) with structured retrieval that converts legacy mainframe COBOL/JCL into Java 17 Spring Boot services. On the pilot application, delivery fell from roughly six months on the prior all-manual baseline to roughly six weeks (measured on one application).",
+      "Own the target Java architecture the generated output has to conform to — service boundaries, interfaces, and coding standards — alongside the pipeline that produces it.",
+      "Built the retrieval layer: hybrid lexical and dense search over Elasticsearch with chunking and query rewriting, so generated code is grounded in the customer's own source and standards rather than model priors.",
+      "Ran discovery directly with the customer's engineering teams; translated ambiguous business and system requirements into written technical specifications, and gated output accuracy on test-case-driven evaluation.",
+      "Deployed and operate the system on Vertex AI + OpenShift as distributed services on Kubernetes — model invocation, retrieval, error handling, retries, and structured logging.",
     ],
   },
   {
@@ -158,7 +171,9 @@ export const experience: Experience[] = [
     location: "Toronto, ON",
     bullets: [
       "Delivered cloud-native backend services in Java 17, Spring Boot, Spring Security, and Hibernate on OpenShift + GCP for an enterprise modernization program.",
-      "Designed microservices for modularity and high availability with pub/sub patterns; integrated Splunk + Dynatrace for logging and performance monitoring.",
+      "Designed microservices around pub/sub messaging for real-time data flow and high availability; configured OpenShift Deployments, Services, and Routes.",
+      "Tuned application performance through multi-threading and memory management; automated operational tasks with Unix shell scripting.",
+      "Integrated Splunk + Dynatrace for logging and performance monitoring; ran code reviews and mentored junior developers.",
     ],
   },
   {
@@ -168,9 +183,10 @@ export const experience: Experience[] = [
     location: "Mississauga, ON",
     customer: "Fortune-50 US telecom carrier",
     bullets: [
-      "Customer-embedded engineer partnering directly with the carrier's teams — discovery, technical specs, and shipping to production.",
-      "Built resilient React micro-frontends backed by Node.js / Spring Boot microservices on AWS + OpenShift.",
-      "Reduced production downtime ~30% and cut incident-resolution time ~20% through hands-on triage and clear stakeholder comms.",
+      "Spent just over two years on the 24/7 on-call rotation owning production incident triage for high-throughput Java/Spring services on AWS + OpenShift — diagnosing concurrency and race conditions, lock contention, and database index performance under live load.",
+      "Customer-embedded engineer partnering directly with the carrier's teams across three countries — discovery, technical specs, and shipping to production.",
+      "Built resilient React micro-frontends backed by Node.js / Spring Boot microservices, end-to-end from analysis and design through implementation and support.",
+      "Documented system components and architecture designs against security, integration, and operability standards; tracked analysis and delivery in Jira and Confluence.",
     ],
   },
   {
@@ -180,8 +196,8 @@ export const experience: Experience[] = [
     location: "Toronto, ON",
     customer: "Credit-risk scoring platform (fintech)",
     bullets: [
-      "Built Selenium + JUnit automation in CI/CD/CT pipelines, lifting defect detection ~15% and cutting test-cycle time ~20%.",
-      "Implemented functional + non-functional automation (performance, reliability, security).",
+      "Built Selenium + JUnit automation in CI/CD/CT pipelines for a regulated credit-risk scoring platform, covering functional and non-functional behaviour (performance, reliability, security).",
+      "Designed and maintained manual and automated test suites with traceability matrices derived from business requirements, design specs, and architecture blueprints.",
     ],
   },
   {
@@ -199,7 +215,7 @@ export const experience: Experience[] = [
     period: "Jan 2021 — May 2021",
     location: "Ontario, Canada",
     bullets: [
-      "Selected as 1 of ~40 Canadian ambassadors from thousands of global applicants.",
+      "Selected as one of approximately 40 ambassadors across Canada.",
       "Ran enablement sessions explaining Azure to university peers; gathered requirements and trained others.",
     ],
   },
@@ -217,10 +233,10 @@ export const skills: { label: string; items: string[] }[] = [
       "LangGraph",
       "CrewAI",
       "RAG",
+      "Hybrid Retrieval",
       "Prompt Engineering",
       "LLM Evaluation",
       "LangChain",
-      "Google ADK",
       "Gemini",
       "Vertex AI",
       "Amazon Bedrock",
@@ -228,27 +244,56 @@ export const skills: { label: string; items: string[] }[] = [
   },
   {
     label: "Languages",
-    items: ["Python", "Java", "TypeScript", "JavaScript", "SQL"],
+    items: [
+      "Python",
+      "Java (JDK 17)",
+      "TypeScript",
+      "JavaScript",
+      "C++",
+      "SQL",
+      "Bash",
+    ],
   },
   {
     label: "Backend & Architecture",
     items: [
+      "Core Java",
       "Spring Boot",
+      "Spring Security",
+      "Hibernate",
       "FastAPI",
       "Node.js",
       "Microservices",
       "REST APIs",
       "Apache Kafka",
+      "Event-Driven Architecture",
+      "Concurrency & Multi-threading",
+      "Distributed Systems",
       "System Design",
     ],
   },
   {
     label: "Cloud & DevOps",
-    items: ["AWS", "Google Cloud", "OpenShift", "Docker", "Kubernetes", "CI/CD"],
+    items: [
+      "AWS",
+      "Google Cloud",
+      "OpenShift",
+      "Docker",
+      "Kubernetes",
+      "Helm",
+      "Linux",
+      "CI/CD",
+      "Jenkins",
+      "GitHub Actions",
+    ],
   },
   {
     label: "Data",
     items: ["PostgreSQL", "Oracle", "Elasticsearch", "Redis", "Couchbase"],
+  },
+  {
+    label: "Testing & Observability",
+    items: ["JUnit", "pytest", "Selenium", "Splunk", "Dynatrace", "Kibana"],
   },
 ];
 
@@ -265,6 +310,9 @@ export const certifications = {
     "Claude with Amazon Bedrock",
   ],
   coursework: [
+    "Become a Spring Boot Developer",
+    "Kubernetes: Package Management with Helm",
+    "Learn Apache Kafka for Beginners",
     "Building RAG Applications",
     "Vector Databases for RAG",
     "AWS (Amplify CLI, A-to-Z)",
